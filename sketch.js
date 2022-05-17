@@ -7,13 +7,12 @@ function setup() {
   }var radius;
   var num_segments = 6;
   var colours = ["#320E3B", "#E56399", "#7F96FF", "#A6CFD5", "#DBFCFF", "#CEC3C1"];
-  var labels = ["Palimpses.", "Anthropo.", "Perform.", "Adaptive", "EXP,Memory", "Contact"];
+  var labels = ["Palimpses.", "Anthropo.", "Perform.", "Adaptive", "Memory", "Contact"];
   var counter = 0;
   var rotating = false;
   var rot_angle;
   var previous_angle=0;
   var rand_num;
-  let myFont;
   var sectors = [];
   var vectors = [];
   var point_x;
@@ -25,10 +24,6 @@ function setup() {
   var min_dist;
   var OG_sects = [1,2,3,4,5,6];
   var OG_vects = [1,2,3,4,5,6];
-  
-  function preload() {
-    myFont = loadFont('fbg_type.ttf');
-  }
   
   function setup() {
     createCanvas(windowWidth, windowHeight);
@@ -52,7 +47,6 @@ function setup() {
     stroke(255)
     translate(width/2, height/2)
     background("#fffec8");
-    textFont(myFont);
     
     if(rotating){
       counter += 1
