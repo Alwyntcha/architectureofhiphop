@@ -1,5 +1,5 @@
 function setup() {
-    createCanvas(400, 400);
+    createCanvas(windowWidth, windowHeight);
   }
   
   function draw() {
@@ -7,7 +7,7 @@ function setup() {
   }var radius;
   var num_segments = 6;
   var colours = ["#320E3B", "#E56399", "#7F96FF", "#A6CFD5", "#DBFCFF", "#CEC3C1"];
-  var labels = ["Palimpsestic", "Anthropomorphic", "Performative.", "Adaptive", "EXP & Memory", "Contact"];
+  var labels = ["Palimpses.", "Anthropo.", "Perform.", "Adaptive", "EXP,Memory", "Contact"];
   var counter = 0;
   var rotating = false;
   var rot_angle;
@@ -62,10 +62,6 @@ function setup() {
       handle_end_spin()
       }
     
-    // if(reset_wheel){
-    //   remove_sector(min_sect)
-    // }
-    
     push()
     fill(255)
     circle(0,0, radius+30)
@@ -84,15 +80,12 @@ function setup() {
   }
   
   function mousePressed() {
-    // print(mouseX)
     if(mouseX>width/2){
     rotating = true;
     rand_num = random(104, 300)
     min_dist = width*height;
     min_sect = 0;
     }else{
-      print("removing..."+sectors[min_sect].text)
-      // remove_sector(min_sect)
     }
   }
   
